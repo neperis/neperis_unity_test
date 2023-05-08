@@ -3935,7 +3935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AssetsPPU: 16
   m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_RefResolutionY: 320
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -4241,6 +4241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObj: {fileID: 0}
   toObj: {fileID: 1891402931}
+  virutualCamera: {fileID: 662070538}
+  Ground: {fileID: 2022346780}
+  Ground2: {fileID: 1890505875}
 --- !u!61 &1361583540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13545,6 +13548,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObj: {fileID: 0}
   toObj: {fileID: 1361583538}
+  virutualCamera: {fileID: 662070538}
+  Ground: {fileID: 0}
+  Ground2: {fileID: 0}
 --- !u!61 &1891402933
 BoxCollider2D:
   m_ObjectHideFlags: 0

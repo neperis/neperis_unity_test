@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,17 @@ public class TelePort : MonoBehaviour
 
     public GameObject toObj;
     public GameObject virutualCamera;
-    
-    
 
+    CinemachineConfiner cameraComponent;
+    public Collider2D Ground;
+    public Collider2D Ground2;
+
+    void Awake()
+    {
+        cameraComponent = FindObjectOfType<CinemachineConfiner>();
+    }
+    
+    
     void Start()
     {
         virutualCamera = GameObject.Find ("Virutual Camera");
@@ -38,14 +47,14 @@ public class TelePort : MonoBehaviour
         
         if(this.name == "TelePort")
         {
-            //cameraComponent.BoundingShape2D = Ground;
             targetObj.transform.position = new Vector2(3.5f, 30);
+            cameraComponent.m_BoundingShape2D = Ground2;
         }
         else if(this.name == "TelePort2")
         {
-            //cameraComponent.BoundingShape2D = Ground2;
             targetObj.transform.position = new Vector2(3.5f, 2.5f);
+            cameraComponent.m_BoundingShape2D = Ground;
         }
-        
+
     }
 }
