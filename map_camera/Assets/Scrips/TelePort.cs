@@ -7,6 +7,16 @@ public class TelePort : MonoBehaviour
     public GameObject targetObj;
 
     public GameObject toObj;
+    public GameObject virutualCamera;
+    
+    
+
+    void Start()
+    {
+        virutualCamera = GameObject.Find ("Virutual Camera");
+        Debug.Log(virutualCamera);
+        
+    }
     
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -28,10 +38,12 @@ public class TelePort : MonoBehaviour
         
         if(this.name == "TelePort")
         {
-            targetObj.transform.position = new Vector2(4, 14);
+            //cameraComponent.BoundingShape2D = Ground;
+            targetObj.transform.position = new Vector2(3.5f, 30);
         }
         else if(this.name == "TelePort2")
         {
+            //cameraComponent.BoundingShape2D = Ground2;
             targetObj.transform.position = new Vector2(3.5f, 2.5f);
         }
         
